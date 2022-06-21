@@ -25,6 +25,13 @@
 				"type": "string",
 				"default": "%PROJECT_PATH/setup.cfg",
 				"order": 3
+			},
+			"customToml": {
+				"title": "Toml file path",
+				"description": "Path to a toml file.",
+				"type": "string",
+				"default": "",
+				"order": 4
 			}
 		}
 	},
