@@ -1,15 +1,15 @@
-[Atom-Python-Linters](https://atom.io/packages/python-linters)
+[Atom-Py-Linters](https://atom.io/packages/py-linters)
 ===================
 
-**KISS solution to lint python code within Atom.**
+**Customizable Python Lintor for Atom**
 
 [![repo status Active](https://www.repostatus.org/badges/latest/active.svg "repo status Active")](https://www.repostatus.org/#active)
-[![last commit](https://img.shields.io/github/last-commit/elarivie/atom-python-linters)](https://github.com/elarivie/atom-python-linters/commits/master)
+[![last commit](https://img.shields.io/github/last-commit/csbasil/atom-py-linters)](https://github.com/csbasil/atom-py-linters/commits/master)
 
-[![python-linters_BugTracker](https://img.shields.io/github/issues/elarivie/atom-python-linters.svg)][python-linters_BugTracker]
-[![Build Status](https://travis-ci.org/elarivie/atom-python-linters.svg?branch=master)](https://travis-ci.org/elarivie/atom-python-linters)
+[![py-linters_BugTracker](https://img.shields.io/github/issues/csbasil/atom-py-linters.svg)][py-linters_BugTracker]
+[![Build Status](https://travis-ci.org/csbasil/atom-py-linters.svg?branch=master)](https://travis-ci.org/cs/atom-py-linters)
 
-This [atom][atom homepage] package is a All-In-One linter for [python][python homepage] code, it internally use multiple linting tools:
+This [atom][atom homepage] package is a modified version of atom [python-linters][python-linters homepage] package. It is an all-in-one linter for [python][python homepage] code which internally use multiple linting tools:
 
 - [flake8][flake8 homepage]
 - [mypy][mypy homepage]
@@ -21,11 +21,13 @@ The lint triggers of all of those linting tools can individually be configure to
 * `Lint on file save`
 * `Never`
 
-You don't need to install all of those lint tool if you don't want/need them.  If any of the above lint tool is not install, it will be detected and a user friendly message will guide you to either install it or change its lint trigger to 'Never'.
+If any of the above lint tool is not installed, it will be detected and a user friendly message will guide you to either install it or change its lint trigger to 'Never'.
 
-To provide specific lint options, python-linters supports setup.cfg configuration file format <a href="http://renesd.blogspot.com/2017/02/setupcfg-solution-to-python-config-file.html">which is supported by all of the above lint tool</a>.
+To provide specific lint options, `py-linters` supports `setup.cfg` configuration file format <a href="http://renesd.blogspot.com/2017/02/setupcfg-solution-to-python-config-file.html">which is supported by all of the above lint tool</a>.
 
 Having lint options in a file external to the IDE settings allows to share the configuration with other process like manual run or CI and therefore obtain consistent lint results.
+
+To provide project specific package configurations, `py-linters` support an external toml file.  When toml file is provided, all the global settings for `py-linters` package is ignored and settings from toml file is used. This feature allows to override the global `py-linters` settings and keeps project specific `py-linters` configurations.
 
 ## Prerequisites
 
@@ -33,18 +35,17 @@ Having lint options in a file external to the IDE settings allows to share the c
 
 ## Installation steps
 
-	apm install python-linters
+	apm install py-linters
 
 ## ⎇ Alternatives
 
 Use the following atom linting packages:
+- https://atom.io/packages/python-linters
 - https://atom.io/packages/linter-flake8
 - https://atom.io/packages/linter-mypy
 - https://atom.io/packages/linter-pydocstyle
 - https://atom.io/packages/linter-pylint
 
-**Note:** You can use any of the above alternate linting packages in parallel with python-linters.
-In which case you should set their lint trigger setting to `Never` to avoid double processing.
 
 ## ⚖️ License
 
@@ -60,5 +61,5 @@ This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.t
 [mypy homepage]: http://www.mypy-lang.org/
 [pydocstyle homepage]: https://pypi.org/project/pydocstyle/
 [pylint homepage]: https://www.pylint.org/
-
-[python-linters_BugTracker]: https://github.com/elarivie/atom-python-linters/issues
+[python-linters homepage]: https://github.com/elarivie/atom-python-linters
+[py-linters_BugTracker]: https://github.com/csbasil/atom-py-linters/issues

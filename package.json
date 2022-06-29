@@ -105,10 +105,5 @@
         "2.0.0": "provideLinter"
       }
     }
-  },
-  "apmInstallSource": {
-    "type": "git",
-    "source": "git@github.com:csbasil/atom-py-linters.git",
-    "sha": "2bbf6af2cc5829999cc31d97b11d5e57857fbb23"
   }
 }
