@@ -1,7 +1,7 @@
 {
   "name": "py-linters",
   "main": "./lib/main.js",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "This package is a modified version of python-linters package which supports project specific configurations via toml file.",
   "license": "MIT",
   "repository": "https://github.com/csbasil/atom-py-linters",
