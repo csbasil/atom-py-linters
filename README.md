@@ -27,13 +27,22 @@ To provide specific lint options, `py-linters` supports `setup.cfg` configuratio
 
 Having lint options in a file external to the IDE settings allows to share the configuration with other process like manual run or CI and therefore obtain consistent lint results.
 
-To provide project specific package configurations, `py-linters` support an external toml file.  When toml file is provided, all the global settings for `py-linters` package is ignored and settings from toml file is used. This feature allows to override the global `py-linters` settings and keeps project specific `py-linters` configurations.
+To provide project specific package configurations, `py-linters` support an external toml file.  When toml file is provided, all the global settings for `py-linters` package is ignored and settings from toml file is used. This feature allows to override the global `py-linters` settings and keeps project specific `py-linters` configurations. 
+
+## Toml File Options
+Following variables can be set from toml for project specific configurations:
+```
+PythonPath="%PROJECT_PATH/env/bin"
+PythonExecutable="%PROJECT_PATH/env/bin/python3"
+LintConfig=""
+```
+All empty varibles in the toml must be provided with empty strings like `LintConfig`
 
 ## Prerequisites
 
 - [atom](https://atom.io/) must be installed which will provide the apm command aka *Atom Package Manager*.
 
-## Installation steps
+## Installation Steps
 
 	apm install py-linters
 
